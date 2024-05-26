@@ -1,0 +1,341 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0D1316;
+    color: white;
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#left-icon{
+	color:black;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container {    
+    width: 100%;
+    padding: 30px 40px;
+}
+
+.header {
+    background-color: #c29cd6;
+  font-family: "Garamond", Times, serif; 
+}
+.header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.header .logo {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+	color : black;
+}
+
+.header i {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.header span{
+	font-size:25px;
+	margin-right: 20px;
+}
+
+
+
+
+/* -------------- Search ------------------ */
+
+.search {
+    position: relative;
+	color: black;
+}
+
+.search i {
+    cursor: pointer;
+    z-index: 99;
+}
+
+.search input {
+    width: 100%;
+    height: 35px;
+    padding: 8px;
+    background-color: #fff !important;
+    border: none;
+    outline: none;
+}
+
+.search > #search-action {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 120%;
+    width: 240px;
+}
+
+#search-action > .result {
+    border-top: 1px solid #333;
+    width: 100%;
+    background-color: white;
+    max-height: 500px;
+    overflow-y: auto;
+    z-index: 99 !important;
+    position: relative;
+}
+
+.result-song {
+    padding: 10px 5px;
+    color: black;
+    display: flex;
+    cursor: pointer;
+    border-bottom: 1px solid #33333368;
+}
+.result-song img {
+    width: 60px;
+    margin-right: 5px;
+}
+.result-song .singer {
+    font-size: 14px;
+}
+
+#footer{
+	text-align:center;
+	background-color:#000;
+	width:100%;
+	padding: 20px 20px;
+}
+
+
+/* ---------------- Song List ----------------- */
+
+.song {
+    background-color: #333;
+    padding: 15px 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.favoriate {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #ffffff1c;
+    border-radius: 6px;
+}
+
+.favoriate > i {
+    margin: 5px;
+}
+
+.conver-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.conver-content img {
+    width: 160px;
+    border-radius: 6px;
+    margin-right: 15px;
+}
+
+.song_name {
+    font-size: 20px;
+    margin-bottom: 10px;
+	color:#d091f2;
+}
+
+.song_singer {
+    font-size: 18px;
+	color:#d091f2;
+}
+
+
+
+
+
+/* --------------- Current Play Song --------------- */
+.current {
+    width: 100%;
+    margin: 0 auto;
+    min-height: 400px;
+    padding: 50px 10px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    border: 1px solid #ffffff1e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-image: url('./assets/images/playing.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #0D1316;
+    position: relative;
+}
+.current .fa-music {
+    font-size: 50px;
+}
+.current .name {
+    font-size: 20px;
+    font-weight: bold;
+}
+.current .name, .current .singer, .current .fa-music {
+    margin-bottom: 10px;
+}
+
+#current-content {
+    margin-bottom: 15px;
+}
+
+.action i {
+    font-size: 28px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 16px;
+    transition: all .3s ease;
+    background-color: transparent;
+}
+
+.action i:hover {
+    color: yellow;
+}
+
+.volume {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.volume span {
+    width: 50px;
+    height: 50px;
+    padding: 8px;
+    background-color: #555;
+    margin: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.volume span i {
+    font-size: 20px;
+}
+
+
+
+
+/* --------------- Progress Bar --------------- */
+
+.progressBar {
+    width: 280px;
+    height: 5px;
+    margin: 8px auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #333;
+}
+.currentProgress {
+    width: 0px;
+    height: 100%;
+    border-radius: 5px;
+    background-color: yellowgreen;
+}
+
+
+
+@media screen and (max-width: 420px) {
+    .current {
+        width: 300px;
+    }
+
+    .songs {
+        width: 300px;
+    }
+
+    .header .logo {
+        font-size: 20px;
+    }
+}
+
+
+
+/* ---------------- Custom Scrollbar ----------- */
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 5px !important;
+  }
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+
+}
+
+
+
+/* ------------------- Song List ---------------- */
+.songs {
+    width: 380px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.song {
+    width: 100%;
+    margin-bottom: 15px;
+    color: yellow;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.song .no {
+    margin-right: 10px;
+}
+
+.recent {
+    font-size: 14px;
+    font-style: italic;
+    color: rgba(255, 0, 0, 0.644);
+}

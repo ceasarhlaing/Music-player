@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="play.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <a href="index.html">
+			<img src="images/logo2.png" width="200px">
+             <!--   <i id="left-icon" class="fa-solid fa-angle-left"></i> -->
+				
+            </a>
+            <div class="logo">
+               <a href="index.html" id="left-icon"><span>Home</span></a>
+               <a href="contact.html" > <span>  Contact Us</span></a>
+			   <a href="aboutus.html" > <span>  About Us</span></a>
+            </div>
+            <div class="search" id="search-container">
+                <div  id="search-action" hidden>
+                    <input type="search" id="search-input" placeholder="Search songs">
+                    <div class="result" id="result">
+                        <!-- 
+                            <div class="result-song">
+                                <img src="./assets/audios/one_direction/youandi.webp" alt="">
+                                <div>
+                                    <p class="name">Story Of My Life</p>
+                                    <p class="singer">One Direction</p>
+                                </div>
+                            </div> 
+                        -->
+                    </div>
+                </div>
+                <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
+				
+				<a href="login1.html"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container"> 
+        <div class="current" id="current">
+            <div class="volume">
+                <span id="volume-percent"> 100% </span>
+                <span id="volume-increase"><i class="fa-solid fa-volume-high"></i></span>
+                <span id="volume-decrease"><i class="fa-solid fa-volume-low"></i></span>
+                <span id="favoriate-action"><i class="fa-solid fa-heart"></i></span>
+            </div>
+             
+            <audio src="" hidden id="current-song"></audio>
+
+            <i class="fa-solid fa-music"></i>
+
+            <div id="current-content">
+                <!-- 
+                    <p class="name">Anyone</p>
+                    <p class="singer">Justin bieber</p> 
+                -->
+            </div>
+
+            <div id="currentAndTotalTime"> 00:00 / 00:00 </div>
+            <div class="progressBar" id="progressBar">
+                <div class="currentProgress" id="currentProgress">
+
+                </div>
+            </div>
+
+            <div class="action">
+                <span id="previous">
+                    <i class="fa-solid fa-backward-step"></i>
+                </span>
+                <span id="play-pause">
+                    
+                </span>
+                <span id="next">
+                    <i class="fa-solid fa-forward-step"></i>
+                </span>
+            </div>
+        </div>
+
+        <ul id="song-list">
+            <!-- song .....  -->
+        </ul>
+
+    </div>
+	<div id="footer">Euphoria Music Player 2023<br>
+	Copyright &copy; by Euphoria <br>
+	<div class="row mb-5">
+							  
+							<div class="col-md-3">
+								<div class="dbox w-100 text-center">
+			        		<div class="icon d-flex align-items-center justify-content-center">
+			        			<span class="fa fa-paper-plane"></span>
+			        		</div>
+			        		<div class="text">
+				            <p><span>Email:</span> <a href="mailto:euphoria@gmail.com">Euphoria@mp.com</a></p>
+				          </div>
+			          </div>
+							</div>
+							<div class="col-md-3">
+								<div class="dbox w-100 text-center">
+			        		<div class="icon d-flex align-items-center justify-content-center">
+			        			<span class="fa fa-globe"></span>
+			        		</div>
+			        		<div class="text">
+				            <p><span>Website</span> <a href="#">www.euphoriamusicplayer.com</a></p>
+				          </div>
+			          </div>
+							</div>
+						</div>
+</div>
+
+    <script src="play.js"></script>
+    <script src="search.js"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

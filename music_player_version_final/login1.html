@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Euphoria Music Player</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link href="loginstyle1.css" rel="stylesheet" />
+	 <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+     
+        
+            
+               
+			    <img src="images/logo2.png" width="200px">
+            
+            
+			
+       
+    
+    <div class="login-box">
+      <h2>Welcome From Euphoria</h2>
+      <form id="form">
+        <div class="user-box">
+          <input class="form-control" type="text" name="" required="" />
+          <label>E-mail</label>
+        </div>
+        <div class="user-box">
+          <input class="pass" type="password" name="" required="" />
+          <label>Password</label>
+        </div>
+        <a class="btn"> 
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Login
+        </a>
+      </form>
+    </div>
+
+	
+	
+    <script>
+      const emailTag = document.getElementsByClassName("form-control")[0];
+      const passTag = document.getElementsByClassName("pass")[0];
+      const loginTag = document.getElementsByClassName("btn")[0];
+      const formTag = document.getElementById("form");
+      const email = "user@gmail.com";
+      const password = "123";
+
+      let value = "";
+      const emailValue = (event) => {
+        value = event.target.value;
+      };
+      let valuePass = "";
+      const passwordValue = (event) => {
+        valuePass = event.target.value;
+      };
+
+      const loginActive = () => {
+        if (value == email && valuePass == password) {
+          window.location.href = "index.html";
+        } else {
+          formTag.reset();
+        }
+      };
+
+      loginTag.addEventListener("click", loginActive);
+
+      emailTag.addEventListener("change", emailValue);
+      passTag.addEventListener("change", passwordValue);
+    </script>
+	
+  </body>
+</html>

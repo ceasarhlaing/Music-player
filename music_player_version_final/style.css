@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0D1316;
+    color: white;
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    padding: 30px 40px;
+	
+}
+
+.header {
+    background-color: #c29cd6;
+  font-family: "Garamond", Times, serif;    
+}
+.header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.header .logo {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+	color : black;
+}
+
+
+.header i {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.header span{
+	font-size:25px;
+	margin-right: 20px;
+}
+
+
+
+#left-icon{
+	color:black;
+	text-align: left;
+}
+
+/* -------------- Search ------------------ */
+
+.search {
+    position: relative;
+	color: black;
+}
+
+.search i {
+    cursor: pointer;
+    z-index: 99;
+}
+
+.search input {
+    width: 100%;
+    height: 35px;
+    padding: 8px;
+    background-color: #fff !important;
+    border: none;
+    outline: none;
+}
+
+.search > #search-action {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 120%;
+    width: 240px;
+}
+
+#search-action > .result {
+    border-top: 1px solid #333;
+    width: 100%;
+    background-color: white;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.result-song {
+    padding: 10px 5px;
+    color: black;
+    display: flex;
+    cursor: pointer;
+    border-bottom: 1px solid #33333368;
+}
+.result-song img {
+    width: 60px;
+    margin-right: 5px;
+}
+.result-song .singer {
+    font-size: 14px;
+}
+
+/* -------------- Album List ---------------- */
+
+#album-list {
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+.album {
+    background-color: #333;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    padding-bottom: 15px;
+    text-align: center;
+    margin: 10px 3px;
+    width: 24%;
+}
+
+.album img {
+    width: 100% !important;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    margin-bottom: 15px;
+
+}
+
+.album_name {
+    padding: 0 10px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.album_singer {
+    padding: 0 10px;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 900px) {
+    #album-list {
+      flex-direction: row; 
+      justify-content: center;
+      align-items: stretch;
+    }
+
+    .album {
+        flex: none;
+        width: 30% !important; 
+        margin: 10px 5px; 
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #album-list {
+      flex-direction: column; 
+      align-items: center;
+    }
+
+    .album {
+      flex: 1; 
+      width: 100% !important; 
+      margin: 5px 0; 
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .header .logo {
+        font-size: 20px;
+    }
+}
+
+/* Footer */
+#footer{
+	text-align:center;
+	background-color:#000;
+	width:100%;
+	padding: 20px 20px;
+}
+
+
+
+
+
+
+
+/* ---------------- Custom Scrollbar ----------- */
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 5px !important;
+  }
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+
+}
+

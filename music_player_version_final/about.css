@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fafafa;
+    color: black;
+    width: 100%;
+    height: 100px;
+    overflow-y: scroll;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+#left-icon{
+	color:black;
+}
+
+
+.container {    
+    width: 100%;
+    padding: 30px 40px;
+}
+
+.header {
+    background-color: #c29cd6;
+  font-family: "Garamond", Times, serif; 
+}
+.header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.header .logo {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+	color : black;
+}
+
+.header i {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.header span{
+	font-size:25px;
+	margin-right: 20px;
+}
+
+
+#footer{
+	text-align:center;
+	background-color:#000;
+	width:100%;
+	padding: 20px 20px;
+}
+
+
+
+
+
+/* --------------- Progress Bar --------------- */
+
+.progressBar {
+    width: 280px;
+    height: 5px;
+    margin: 8px auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #333;
+}
+.currentProgress {
+    width: 0px;
+    height: 100%;
+    border-radius: 5px;
+    background-color: yellowgreen;
+}
+
+
+
+@media screen and (max-width: 420px) {
+    .current {
+        width: 300px;
+    }
+
+    .songs {
+        width: 300px;
+    }
+
+    .header .logo {
+        font-size: 20px;
+    }
+}
+
+
+
+/* ---------------- Custom Scrollbar ----------- */
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 5px !important;
+  }
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+
+}
+
+
+
+
